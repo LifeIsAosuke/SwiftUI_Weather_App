@@ -87,7 +87,7 @@ struct ContentView: View {
                                     .font(.system(size: 16))
                                     .frame(maxWidth: .infinity)
                                 
-                                Gauge(value: Double(foreast.highestTemperature), in: 25...35) {}
+                                Gauge(value: Double(forecast.highestTemperature), in: 25...35) {}
                                     .gaugeStyle(.accessoryLinear) // 横長ゲージ
                                     .tint(Gradient(colors: [.yellow, .orange])) // ゲージの色
                                     .frame(width: 120) // ゲージの幅
@@ -98,6 +98,10 @@ struct ContentView: View {
                         Divider()
                     }
                 }
+                .padding()
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(16)
+                .padding(.horizontal,24)
             }
         }
         .foregroundColor(.white)
